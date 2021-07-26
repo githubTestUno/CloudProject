@@ -1,3 +1,13 @@
-body {
-  background: gold;
+:root {
+  --color-primary: #2584ff;
+  --color-secondary: #00d9ff;
+  --color-accent: #ff3400;
+  --color-headings: #1b0760;
+  --color-body: #918ca4;
 }
+
+/* 1st, identify the primary, secondary, and accent color.
+   2nd, Define the color pallet using the variables. So we can reuse them in multiple places.
+   Note: use the :root pseudo selector = <html> element
+        :root - define the global variables
+    */
