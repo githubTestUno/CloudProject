@@ -42,3 +42,21 @@ p {
   /* This property will let the heading<h3> decide the margin above the <p>   */
   margin-top: 0;
 }
+
+/* 1024px - Standard Breakpoint (Used by Bootstrap and Tailwind)
+   Breaking point for Loptop and Desktop. */
+@media screen and (min-width: 1024px) {
+  /* Use Photoshop to measure their px: */
+  body {
+    font-size: 1.8rem;
+  }
+  h1 {
+    font-size: 8rem;
+  }
+  h2 {
+    font-size: 4rem;
+  }
+  h3 {
+    font-size: 2.4rem;
+  }
+}
