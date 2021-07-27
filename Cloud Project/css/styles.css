@@ -10,12 +10,35 @@
    Note: use the :root pseudo selector = <html> element
         :root - define the global variables
     */
+html {
+  font-size: 62.5%;
+}
 body {
   font-family: Inter, Arial, Halvetica, sans-serif;
+  font-size: 2.4rem;
+  /* it means 1.5 x the current font-size:*/
+  line-height: 1.5;
   color: var(--color-body);
 }
 h1,
 h2,
 h3 {
   color: var(--color-headings);
+  margin-bottom: 1rem;
+}
+h1 {
+  font-size: 7rem;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+p {
+  /* This property will let the heading<h3> decide the margin above the <p>   */
+  margin-top: 0;
 }
