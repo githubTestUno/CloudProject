@@ -10,6 +10,7 @@
    Note: use the :root pseudo selector = <html> element
         :root - define the global variables
     */
+/* Typhography*/
 html {
   font-size: 62.5%;
 }
@@ -58,5 +59,39 @@ p {
   }
   h3 {
     font-size: 2.4rem;
+  }
+}
+
+/* Links */
+/* This rule will remove all the underline on anchor element */
+a {
+  text-decoration: none;
+}
+
+.link-arrow {
+  color: var(--color-accent);
+  text-transform: uppercase;
+  /* These values is from mobile version of our design */
+  font-size: 2rem;
+  font-weight: bold;
+  margin-right: 1px;
+}
+
+.link-arrow::after {
+  content: "-->";
+  margin-left: 5px;
+  /* Apply the transition to make it smooth trasnition */
+  transition: margin 0.15s;
+}
+
+/* Targeting the "after" element, This class will move the arrow 10px from R to L once u hover it. */
+.link-arrow:hover::after {
+  margin-left: 10px;
+}
+
+/* Best Approach to make a new @media query for "Links" part  */
+@media screen and (min-width: 1024px) {
+  .link-arrow {
+    font-size: 1.5rem;
   }
 }
