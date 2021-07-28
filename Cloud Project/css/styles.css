@@ -95,3 +95,37 @@ a {
     font-size: 1.5rem;
   }
 }
+
+/* Badges */
+/* The Structure: */
+.badge {
+  border-radius: 20px;
+  padding: 0.5rem 2rem;
+  font-weight: bold;
+  /* This property will prevent the badge from wrapping to second line, Very Important if you have a limited space */
+  white-space: nowrap;
+  font-weight: 600;
+}
+/* The Skin: */
+/* BEM naming convention - "Block Element Modifier" */
+.badge--primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+.badge--secondary {
+  background: var(--color-secondary);
+  color: #fff;
+}
+
+.badge--small {
+  font-size: 1.6rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .badge {
+    font-size: 1.5rem;
+  }
+  .badge--small {
+    font-size: 1.2rem;
+  }
+}
