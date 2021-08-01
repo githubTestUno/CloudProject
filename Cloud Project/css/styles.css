@@ -139,7 +139,9 @@ a {
 }
 
 /* Apply Object oriented principle, Seperating the structure from skin */
-
+/* You don't want to add the li here because CSS will know the HTML structure 
+     instead add a class name of .list__name on ur list item on HTML*/
+/* In BEM we seperate block from it's element using double underscore __ */
 .list--inline .list__item {
   /* inline-block will help you apply a "margin" */
   display: inline-block;
@@ -149,7 +151,8 @@ a {
 
 .list--tick {
   list-style-image: url(../images/tick.svg);
-  /* This property will show off the tick img */
+  /*Ticks img are off the creen so you have to move them 3rem from left.
+    This property will show off the tick img */
   padding-left: 3rem;
 }
 
