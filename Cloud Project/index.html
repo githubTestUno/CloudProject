@@ -18,11 +18,13 @@
 </head>
 
 <body>
-    <ul class="list list--tick">
-        <li class="list__item">Item 1</li>
-        <li class="list__item">Item 2</li>
-        <li class="list__item">Item 3</li>
-    </ul>
+    <span class="icon-container">
+        <!-- Once you remove the class of icon--primary, the logo will turn black,
+             This is the benefit of Object Oriented CSS.
+             We're Seperating sturcture from skin and we can combine diff. skin to achive this result. -->
+        </svg><svg class="icon">
+            <use xlink:href="images/sprite.svg#wordpress"></use>
+    </span>
 </body>
 
 </html>

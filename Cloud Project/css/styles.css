@@ -166,3 +166,32 @@ a {
     padding-left: 0;
   }
 }
+
+/* Icons */
+/* SVG is customizable.
+   Combined all the SVG file with sprite.
+   Sprite - combined multiple image into single image. (Head to: svgsprit.es )
+    Pros: will reduce the number of http request */
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+/* this class will define a seperate skins for this icon(The Structure) */
+.icon--primary {
+  /* fill: property only apply on svg img */
+  fill: var(--color-primary);
+}
+/* Tip: Don't over engineer everythin, Just solve the problem that exist 
+        and you have to fix at the moment */
+
+.icon-container {
+  background: #f3f9fa;
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+  /* Chnage the display to inline-block to inline-flex. TO ceenter the icon */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
