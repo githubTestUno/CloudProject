@@ -195,3 +195,40 @@ a {
   justify-content: center;
   align-items: center;
 }
+
+/* Buttons */
+/* 1st, Always define the structure. 
+   2nd, Do the Mobile first approach. For mobile you always going to have a bigger font*/
+/* 3rd, Make the :hover state for each skin. Make this classes next to them */
+.btn {
+  border-radius: 40px;
+  border: 0;
+  /*cursor: this property will make our "normal" btn w/o <a> clickable */
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 2rem 3rem;
+  text-transform: uppercase;
+  /*ws: incase we have limited space this property will wont let the text and button to wrap to 2nd line */
+  white-space: nowrap;
+}
+
+.btn--primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+.btn--primary:hover {
+  /* You can also use SASS for this one there's a "ligthen(primary, 10%)" "Darker" Version of it */
+  background: #fd4516;
+}
+
+.btn--secondary {
+  background: var(--color-secondary);
+  color: #fff;
+}
+
+.btn--accent {
+  background: var(--color-accent);
+  color: #fff;
+}
+/* Tip: Always test your code as you go */
