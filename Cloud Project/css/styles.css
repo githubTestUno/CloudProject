@@ -4,6 +4,9 @@
   --color-accent: #ff3400;
   --color-headings: #1b0760;
   --color-body: #918ca4;
+  /* This variables is for "Input Group" section */
+  --color-border: #ccc;
+  --border-radius: 30px;
 }
 /* 1st, identify the primary, secondary, and accent color.
    2nd, Define the color pallet using the variables. So we can reuse them in multiple places.
@@ -287,8 +290,8 @@ a {
 /* Inputs */
 
 .input {
-  border-radius: 30px;
-  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  border: 2px solid var(--color-border);
   /* Default color of this is black, but we can change it to same color as our headings */
   color: var(--color-headings);
   font-size: 1.8rem;
@@ -302,6 +305,26 @@ a {
   /* font-size: 2rem; REMEMBER! this is a Structure so dont mix it with a skin, 
   Put this on .input class */
 }
+.input-group {
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  /* This property will take out the entire space and will center <input> field.
+   Now the <input> inside your <div> will become "flex-item" */
+  display: flex;
+}
+
+.input-group .input {
+  border: 0;
+  /* Flex item - This input field will grow and take up the available space */
+  flex-grow: 1;
+  /* This property will remove the space b/w the icon and <input> field */
+  padding: 1.5rem 1rem;
+}
+
+/* This class will fix the margin issue we have from btn-accent */
+.input-group .btn {
+  margin: 4px;
+}
 
 @media screen and (min-width: 1024px) {
   .input {
@@ -309,3 +332,10 @@ a {
   }
 }
 /* Input component is ready now combined it with button */
+
+/* Input Groups */
+/* What u see is an illusion of an "input" component. On reality you have a <div>.
+   Inside this <div> you have the <input> component and <button> component.
+   The actual border is apply to the <div> or container */
+/* You can move around the elemet like <button> before the <input> or vice versa or
+   You can add another components like an icon with your <input> field */
