@@ -283,3 +283,29 @@ a {
     font-size: 1.5rem;
   }
 }
+
+/* Inputs */
+
+.input {
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  /* Default color of this is black, but we can change it to same color as our headings */
+  color: var(--color-headings);
+  font-size: 1.8rem;
+  /* This property will remove the "outline" set by google by default */
+  outline: 0;
+  padding: 1.5rem 3.5rem;
+}
+
+.input::placeholder {
+  color: lightgrey;
+  /* font-size: 2rem; REMEMBER! this is a Structure so dont mix it with a skin, 
+  Put this on .input class */
+}
+
+@media screen and (min-width: 1024px) {
+  .input {
+    font-size: 1.5rem;
+  }
+}
+/* Input component is ready now combined it with button */
