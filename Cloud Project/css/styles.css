@@ -290,8 +290,8 @@ a {
 /* Inputs */
 
 .input {
-  border-radius: var(--border-radius);
   border: 2px solid var(--color-border);
+  border-radius: var(--border-radius);
   /* Default color of this is black, but we can change it to same color as our headings */
   color: var(--color-headings);
   font-size: 1.8rem;
@@ -308,7 +308,7 @@ a {
 .input-group {
   border: 1px solid var(--color-border);
   border-radius: var(--border-radius);
-  /* This property will take out the entire space and will center <input> field.
+  /* This property will take out the entire space for <input> field and will push the button all the way to right end.
    Now the <input> inside your <div> will become "flex-item" */
   display: flex;
 }
@@ -317,7 +317,7 @@ a {
   border: 0;
   /* Flex item - This input field will grow and take up the available space */
   flex-grow: 1;
-  /* This property will remove the space b/w the icon and <input> field */
+  /* This property will remove the space b/w the icon or search btn and <input> field */
   padding: 1.5rem 1rem;
 }
 
@@ -337,5 +337,37 @@ a {
 /* What u see is an illusion of an "input" component. On reality you have a <div>.
    Inside this <div> you have the <input> component and <button> component.
    The actual border is apply to the <div> or container */
-/* You can move around the elemet like <button> before the <input> or vice versa or
+/* You can also move around the elemet like <button> before the <input> or vice versa or
    You can add another components like an icon with your <input> field */
+
+/*  Cards */
+/* Cards should have:
+   1. Round Corner
+   2. Header
+   3. Body
+   4. Shadow Around it */
+.card {
+  border-radius: 7px;
+  /* 0 0 - for <hr> and <vr> offset. 
+    20px - blurring the shadow and maken it softer. 
+    10px - for spreading the shadow, The larger the bigger the shadow.  */
+  box-shadow: 0 0 20px 10px #f3f3f3;
+  /* This property will remove the overflow issue cause by adding a background color on .card__header */
+  overflow: hidden;
+}
+
+/* This will help to line up our elements properly  */
+.card__header,
+.card__body {
+  padding: 2rem 3rem;
+}
+
+.card--primary .card__header {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.card--secondary .card__header {
+  background: var(--color-secondary);
+  color: #fff;
+}
