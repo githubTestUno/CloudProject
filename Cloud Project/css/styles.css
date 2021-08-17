@@ -560,6 +560,7 @@ icon--white {
 
 /* Testimonial */
 .testimonial {
+  /* This property will have a 3 rem  */
   padding: 3rem;
 }
 .testimonial__image {
@@ -567,6 +568,8 @@ icon--white {
 }
 
 .testimonial__image > img {
+  /* This property will provide an equal distribution of the columns for image and quote area.
+     An Image will adjust to browswers size */
   width: 100%;
 }
 
